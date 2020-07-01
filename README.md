@@ -1,2 +1,1 @@
-# lightweight-charts-test
-Tests lightweight chart api 
+"# lightweight-charts-test" 
