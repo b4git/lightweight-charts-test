@@ -160,6 +160,11 @@ chart.subscribeCrosshairMove((param) => {
     }
 });
 
+
+
+// fullscreen handlers
+const toggleButton = document.getElementById("toggleFS")!;
+toggleButton.addEventListener("click", toggleFullscreen);
 window.onkeypress = (ke: KeyboardEvent) => {
     toggleFullscreen();
 }
@@ -176,8 +181,12 @@ function toggleFullscreen() {
         elem.requestFullscreen().catch(err => {
             alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
         });
+        
+    elem.appendChild(toggleButton.parentElement?.removeChild(toggleButton)!);
+    
     } else {
         chart.applyOptions({ width: 800, height: 600 });
         document.exitFullscreen();
+        document.body.appendChild(elem.removeChild(toggleButton));
     }
 }

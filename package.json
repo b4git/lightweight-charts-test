@@ -8,11 +8,11 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "lightweight-charts": "2.0.0"
+    "lightweight-charts": "latest"
   },
   "devDependencies": {
-    "parcel-bundler": "1.12.4",
-    "typescript": "^3.8.3"
+    "parcel-bundler": "latest",
+    "typescript": "latest"
   },
   "keywords": []
 }
